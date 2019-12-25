@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: human
+# key: human
+# --
+<%= $1.human_attribute_name $2 %>$0

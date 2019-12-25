@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: render_error
+# key: render
+# --
+format.html { render :errors, layout: 'error', status: :conflict }

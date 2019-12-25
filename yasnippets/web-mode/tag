@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tag
+# key: tag
+# --
+<%= ${1:$$(yas/choose-value `("text_field" "number_field"))}_tag ${name}, ${value}, class: '${class}' %>$0

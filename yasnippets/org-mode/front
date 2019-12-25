@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: <f
+# key: <f
+# --
+#+TAGS: $1
+#+CATEGORY: ${$$(yas/choose-value `("life" "notes" "gist" "tips" "reading" "ruby"))}
+
+$0
