@@ -33,7 +33,41 @@
 (setq yas-snippet-dirs '("~/.doom.d/yasnippets"))
 ;; If you want to change the style of line numbers, change this to `relative' or
 ;; `nil' to disable it:
+(setq org-default-notes-file "~/Clouds/emacs/GTD/someday.org")
+(setq org-agenda-files '("~/Clouds/emacs/GTD/someday.org"
+                         "~/Clouds/emacs/GTD/gtd.org"
+                         "~/Clouds/emacs/GTD/tickler.org"))
+(setq org-capture-templates '(("t" "Todo [inbox]" entry
+                               (file+headline "~/Clouds/emacs/GTD/inbox.org" "Tasks")
+                               "* TODO %i%?")
+                              ("T" "Tickler" entry
+                               (file+headline "~/Clouds/emacs/GTD/tickler.org" "Tickler")
+                               "* %i%? \n %U")))
+(setq org-refile-targets '(("~/Clouds/emacs/GTD/gtd.org" :maxlevel . 3)
+                           ("~/Clouds/emacs/GTD/someday.org" :level . 1)
+                           ("~/Clouds/emacs/GTD/tickler.org" :maxlevel . 2)))
+
 (setq display-line-numbers-type 'nil)
+    (setq org-publish-project-alist
+          '(("org-blog"
+             ;; Path to your org files.
+             :base-directory "~/blog/org/"
+             :base-extension "org"
+
+             ;; Path to your Jekyll project.
+             :publishing-directory "~/blog/_posts/"
+             :recursive t
+             :publishing-function org-html-publish-to-html
+             :headline-levels 3
+             :html-extension "md"
+             :body-only t ;; Only export section between <body> </body>
+             )
+
+            ("blog"
+             :components ("org-blog")
+             ;; :publishing-function git-commit
+             )))
+
 
 
 ;; Here are some additional functions/macros that could help you configure Doom:
