@@ -93,6 +93,29 @@
   (evil-normal-state)
   )
 
-(global-set-key (kbd "<f12>") 'org-agenda-list)
+(defun create-blog-file ()
+  "Create org file for my blog"
+  (interactive)
+  (let ((title (read-from-minibuffer "Title: ")))
+    (let ((orgfile_name (concat "~/blog/org/"
+                                (format-time-string "%Y-%m-%d-")
+                                (replace-regexp-in-string " " "-" title)
+                                ".org")))
+      (shell-command-to-string (concat "touch " orgfile_name))
+      (find-file orgfile_name )
+      (org-mode)
+      (insert "#+TITLE: " title " \n<f")
+      (yas-expand)
+      )))
 
+(defun publish-my-blog ()
+  "publish to github"
+  (interactive)
+  (org-publish-current-file)
+  (shell-command "../publish.sh -f")
+  )
+
+(global-set-key (kbd "<f12>") 'org-agenda-list)
 (global-set-key (kbd "M-`") 'save-and-evil)
+(global-set-key (kbd "C-c o") 'create-blog-file)
+(global-set-key (kbd "C-c i") 'publish-my-blog)
