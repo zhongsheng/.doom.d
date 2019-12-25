@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: here
+# key: here
+# --
+<<~${1:doc$(upcase yas-text)}
+$0
+$1

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: can
+# key: can
+# --
+<% if can?(:read, $1) %>
+$0
+<% end %>
