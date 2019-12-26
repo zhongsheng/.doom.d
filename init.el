@@ -177,8 +177,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(bookmark-default-file "/home/zhong/Clouds/emacs/bookmarks")
- '(evil-disable-insert-state-bindings t))
+ '(bookmark-default-file "/home/zhong/Clouds/emacs/bookmarks" t)
+ '(evil-disable-insert-state-bindings t)
+ '(projectile-globally-ignored-directories
+   (quote
+    ("~/.emacs.d/.local/" "/home/zhong/org/.attach/" "flow-typed" "node_modules" "~/.emacs.d/.local/" ".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "app/doc"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
