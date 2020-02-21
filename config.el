@@ -119,3 +119,6 @@
 (global-set-key (kbd "M-`") 'save-and-evil)
 (global-set-key (kbd "C-c o") 'create-blog-file)
 (global-set-key (kbd "C-c i") 'publish-my-blog)
+
+(add-to-list 'load-path "~/.doom.d/el/")
+(require 'htmlize)
