@@ -116,7 +116,7 @@
   )
 
 (global-set-key (kbd "<f12>") 'org-agenda-list)
-(global-set-key (kbd "M-`") 'save-and-evil)
+(global-set-key (kbd "C-`") 'save-and-evil)
 (global-set-key (kbd "C-c o") 'create-blog-file)
 (global-set-key (kbd "C-c i") 'publish-my-blog)
 
