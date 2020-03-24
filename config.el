@@ -119,6 +119,7 @@
 (global-set-key (kbd "C-`") 'save-and-evil)
 (global-set-key (kbd "C-c o") 'create-blog-file)
 (global-set-key (kbd "C-c i") 'publish-my-blog)
+(map! :nv "C-=" #'er/contract-region
+      :nv "C-+" #'er/expand-region)
 
-(add-to-list 'load-path "~/.doom.d/el/")
-(require 'htmlize)
+;; (add-to-list 'load-path "~/.doom.d/el/")
