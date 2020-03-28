@@ -48,25 +48,25 @@
                            ("~/Clouds/emacs/GTD/tickler.org" :maxlevel . 2)))
 
 (setq display-line-numbers-type 'nil)
-    (setq org-publish-project-alist
-          '(("org-blog"
-             ;; Path to your org files.
-             :base-directory "~/blog/org/"
-             :base-extension "org"
+(setq org-publish-project-alist
+      '(("org-blog"
+         ;; Path to your org files.
+         :base-directory "~/blog/org/"
+         :base-extension "org"
 
-             ;; Path to your Jekyll project.
-             :publishing-directory "~/blog/_posts/"
-             :recursive t
-             :publishing-function org-html-publish-to-html
-             :headline-levels 3
-             :html-extension "md"
-             :body-only t ;; Only export section between <body> </body>
-             )
+         ;; Path to your Jekyll project.
+         :publishing-directory "~/blog/_posts/"
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :headline-levels 3
+         :html-extension "md"
+         :body-only t ;; Only export section between <body> </body>
+         )
 
-            ("blog"
-             :components ("org-blog")
-             ;; :publishing-function git-commit
-             )))
+        ("blog"
+         :components ("org-blog")
+         ;; :publishing-function git-commit
+         )))
 
 
 
@@ -116,7 +116,7 @@
   )
 
 (global-set-key (kbd "<f12>") 'org-agenda-list)
-(global-set-key (kbd "C-`") 'save-and-evil)
+(global-set-key (kbd "M-`") 'save-and-evil)
 (global-set-key (kbd "C-c o") 'create-blog-file)
 (global-set-key (kbd "C-c i") 'publish-my-blog)
 (map! :nv "C-=" #'er/contract-region
