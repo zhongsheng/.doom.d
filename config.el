@@ -8,6 +8,16 @@
 ;; clients, file templates and snippets.
 (setq user-full-name "zhong sheng"
       user-mail-address "nily.zhong@gmail.com")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(bookmark-default-file "/home/zhong/Clouds/emacs/bookmarks" t)
+ '(evil-disable-insert-state-bindings t)
+ '(projectile-globally-ignored-directories
+   (quote
+    ("~/.emacs.d/.local/" "/home/zhong/org/.attach/" "flow-typed" "node_modules" "~/.emacs.d/.local/" ".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "app/doc"))))
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
 ;;
