@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: file
+# key: file
+# --
+File.expand_path("${1:path}", ${2:__FILE__} )

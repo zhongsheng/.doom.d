@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: select
+# key: select
+# --
+<%= form.select :$1, $2.all.collect {|r| [r.name, r.id]} %>
