@@ -17,7 +17,7 @@
  '(evil-disable-insert-state-bindings t)
  '(projectile-globally-ignored-directories
    (quote
-    ("~/.emacs.d/.local/" "/home/zhong/org/.attach/" "flow-typed" "node_modules" "~/.emacs.d/.local/" ".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "app/doc"))))
+    ("~/.emacs.d/.local/" "/home/zhong/org/.attach/" "flow-typed" "node_modules" "~/.emacs.d/.local/" ".idea" ".ensime_cache" ".eunit" "spec" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "app/doc"))))
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
 ;;
@@ -114,3 +114,18 @@
 (global-set-key (kbd "M-`") 'save-and-evil)
 (global-set-key (kbd "C-c o") 'create-blog-file)
 (global-set-key (kbd "C-c i") 'publish-my-blog)
+
+(fset 'evil-visual-update-x-selection 'ignore)
+
+;; Make evil-mode up/down operate in screen lines instead of logical lines
+(define-key evil-motion-state-map "j" 'evil-next-visual-line)
+(define-key evil-motion-state-map "k" 'evil-previous-visual-line)
+;; Also in visual mode
+(define-key evil-visual-state-map "j" 'evil-next-visual-line)
+(define-key evil-visual-state-map "k" 'evil-previous-visual-line)
+(defun evil-paste-after-from-0 ()
+  (interactive)
+  (let ((evil-this-register ?0))
+    (call-interactively 'evil-paste-after)))
+
+(define-key evil-visual-state-map "p" 'evil-paste-after-from-0)
