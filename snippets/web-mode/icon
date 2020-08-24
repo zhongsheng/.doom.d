@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: icon
+# key: icon
+# --
+<%= icon $1, class: '$2' %>$0

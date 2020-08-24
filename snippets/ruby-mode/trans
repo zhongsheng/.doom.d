@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: trans
+# key: trans
+# --
+ActiveRecord::Base.transaction do
+  $0
+end

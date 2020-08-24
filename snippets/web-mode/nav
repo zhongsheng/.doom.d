@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: nav
+# key: nav
+# --
+<% content_for :nav do %>
+<%= render 'dr/shared/nav' %>
+$0
+<% end %>
