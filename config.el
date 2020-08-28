@@ -130,6 +130,8 @@
 
 (define-key evil-visual-state-map "p" 'evil-paste-after-from-0)
 
+(use-package! web-mode
+  :hook (html-mode))
 (use-package! emmet-mode
   :preface (defvar emmet-mode-keymap (make-sparse-keymap))
   :hook (css-mode web-mode html-mode haml-mode nxml-mode rjsx-mode reason-mode)
@@ -142,3 +144,7 @@
         :v [tab] #'emmet-wrap-with-markup
         :i [tab] #'+web/indent-or-yas-or-emmet-expand
         :i "C-c e" #'emmet-expand-line))
+(use-package evil
+  :custom
+  evil-disable-insert-state-bindings t
+  )
