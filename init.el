@@ -172,22 +172,22 @@
        :config
        ;;literate
        (default +bindings +smartparens))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(bookmark-default-file "/home/zhong/Clouds/emacs/bookmarks" t)
- '(custom-safe-themes
-   (quote
-    ("4a9f595fbffd36fe51d5dd3475860ae8c17447272cf35eb31a00f9595c706050" "e47c0abe03e0484ddadf2ae57d32b0f29f0b2ddfe7ec810bd6d558765d9a6a6c" "6cbf6003e137485fb3f904e76fb15bc48abc386540f43f54e2a47a9884e679f6" default)))
- '(evil-disable-insert-state-bindings t)
- '(projectile-globally-ignored-directories
-   (quote
-    ("~/.emacs.d/.local/" "/home/zhong/org/.attach/" "flow-typed" "node_modules" "~/.emacs.d/.local/" ".idea" ".ensime_cache" ".eunit" "spec" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "app/doc"))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;; (custom-set-variables
+;;  ;; custom-set-variables was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(bookmark-default-file "/home/zhong/Clouds/emacs/bookmarks" t)
+;;  '(custom-safe-themes
+;;    (quote
+;;     ("4a9f595fbffd36fe51d5dd3475860ae8c17447272cf35eb31a00f9595c706050" "e47c0abe03e0484ddadf2ae57d32b0f29f0b2ddfe7ec810bd6d558765d9a6a6c" "6cbf6003e137485fb3f904e76fb15bc48abc386540f43f54e2a47a9884e679f6" default)))
+;;  '(evil-disable-insert-state-bindings t)
+;;  '(projectile-globally-ignored-directories
+;;    (quote
+;;     ("~/.emacs.d/.local/" "/home/zhong/org/.attach/" "flow-typed" "node_modules" "~/.emacs.d/.local/" ".idea" ".ensime_cache" ".eunit" "spec" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "app/doc"))))
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  )
