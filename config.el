@@ -148,3 +148,5 @@
   :custom
   evil-disable-insert-state-bindings t
   )
+
+(add-to-list 'auto-mode-alist '("\\.wxml\\'" . xml-mode))
