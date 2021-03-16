@@ -150,3 +150,4 @@
   )
 
 (add-to-list 'auto-mode-alist '("\\.wxml\\'" . xml-mode))
+(setq org-agenda-files '("~/Clouds/emacs/GTD/"))
