@@ -160,3 +160,4 @@
   )
 
 (global-set-key (kbd "C-c C-y") 'paste-from-tmp)
+(setq org-agenda-files '("~/Clouds/emacs/GTD/"))
