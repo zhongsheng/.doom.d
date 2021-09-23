@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: frame
+# key: frame
+# --
+<html>
+<body>
+<div>
+<h1 class="title"> hi</h1>
+</div>
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ul>
+</body>
+</html>

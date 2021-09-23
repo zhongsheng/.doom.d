@@ -82,10 +82,11 @@
          )))
 
 (defun save-and-evil ()
-  "save buffer then go to evil mode"
+  "Save buffer then go to evil mode"
   (interactive)
   (save-buffer)
   (evil-normal-state)
+  (shell-command "curl http://nat.dzunion.cn:3180/turbo" (get-buffer-create "#refresh"))
   )
 
 (defun create-blog-file ()
@@ -111,7 +112,7 @@
   )
 
 (global-set-key (kbd "<f12>") 'org-agenda-list)
-(global-set-key (kbd "M-`") 'save-and-evil)
+(global-set-key (kbd "C-\\") 'save-and-evil)
 (global-set-key (kbd "C-c o") 'create-blog-file)
 (global-set-key (kbd "C-c i") 'publish-my-blog)
 
@@ -165,3 +166,13 @@
   )
 
 (global-set-key (kbd "C-c C-p") 'trans-copy-to-tmp)
+
+(defun paste-from-tmp ()
+  "Paste"
+  (interactive)
+  (insert-file "/tmp/a.txt")
+  (shell-command "echo '' > /tmp/a.txt")
+  )
+
+(global-set-key (kbd "C-c C-y") 'paste-from-tmp)
+(setq org-agenda-files '("~/Clouds/emacs/GTD/"))
