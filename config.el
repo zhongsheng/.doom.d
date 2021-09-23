@@ -150,3 +150,18 @@
   )
 
 (add-to-list 'auto-mode-alist '("\\.wxml\\'" . xml-mode))
+
+(defun trans-copy-to-tmp (begin end &optional region)
+  "C"
+  (interactive (list (mark) (point)
+		                 (prefix-numeric-value current-prefix-arg)))
+  (copy-region-as-kill begin end)
+  (save-current-buffer
+    (set-buffer (find-file-noselect "/tmp/a.txt"))
+    (mark-whole-buffer)
+    (yank)
+    (save-buffer)
+    )
+  )
+
+(global-set-key (kbd "C-c C-p") 'trans-copy-to-tmp)
